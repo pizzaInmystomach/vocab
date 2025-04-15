@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- 動態載入導覽列 -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("components/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
+  
+  <div class="profile-wrapper">
+    <div class="profile-header">
+      <img src="images/avatar.png" alt="User Avatar" class="profile-avatar" />
+      <div class="profile-info">
+        <h2 class="user-id">@username</h2>
+        <p class="user-status">Currently studying: <strong>TOEIC 600</strong></p>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <h3>Current Vocabulary List</h3>
+      <div class="current-list">
+        <p class="list-title">TOEIC 600</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 45%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <h3>All Vocabulary Lists</h3>
+      <div class="bento-grid">
+        <div class="bento-card">
+          <h4>GRE</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width: 20%"></div>
+          </div>
+        </div>
+        <div class="bento-card">
+          <h4>TOEIC 600</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width: 45%"></div>
+          </div>
+        </div>
+        <div class="bento-card">
+          <h4>Academic</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

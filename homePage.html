@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet"></head>
+  <body>
+
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch("components/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Recite vocabularies<br />effectively and joyfully</h1>
+          <p>This tool will help you find the most suitable way to memorize English words.</p>
+          <a class="btn primary-btn">Try it out</a>
+        </div>
+        <div class="cube-wrapper">
+          <img src="images/hero-img.png" alt="Hero image" id="cube-img"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Word Selection Section -->
+    <section class="word-selection">
+      <div class="word-selection-border"></div>
+      <div class="container">
+        <h2>Choose Your Words</h2>
+        <div class="word-options">
+          <a href="#" class="btn word-option">10 words</a>
+          <a href="#" class="btn word-option">30 words</a>
+          <a href="#" class="btn word-option">100 words</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why This Site Section -->
+    <section class="why-section">
+      <div class="container">
+        <h2>Why this site?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <img src="images/icon1.png" alt="Focus icon" />
+            <h3>Simple & Focused</h3>
+            <p>Clean design helps you stay focused on learning.</p>
+          </div>
+          <div class="why-item">
+            <img src="images/icon2.png" alt="Adaptive icon" />
+            <h3>Adaptive Methods</h3>
+            <p>Choose how many words to recite daily.</p>
+          </div>
+          <div class="why-item">
+            <img src="images/icon3.png" alt="Tracking icon" />
+            <h3>Track Your Progress</h3>
+            <p>See how far you’ve come in your journey.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>vocab</th>
+                  <th>roots</th>
+                  <th>status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>condescending</th>
+                  <th>con+de+scan</th>
+                  <th class="status-100">mastered</th>
+                </tr>
+                <tr>
+                  <th>disturb</th>
+                  <th>dis+turbid</th>
+                  <th class="status-50">reviewing</th>
+                </tr>
+                <tr>
+                  <th>encapsulate</th>
+                  <th>en+capsule+ate</th>
+                  <th class="status-0">unfamilier</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="up-footer">
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+          <ul>
+            <li>FAQ</li>
+            <li>Privacy Policy</li>
+            <li>Support</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="down-footer">
+          <p>© 2025 Pigg All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const img = document.getElementById('cube-img');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 40;
+      const y = (e.clientY / window.innerHeight - 0.5) * 40;
+      img.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+    });
+  </script>
+  <script src="js/modalController.js"></script>
+</html>

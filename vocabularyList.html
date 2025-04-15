@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vocabulary List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body class="vocabList">
+     <!-- Navbar -->
+    <!-- 動態載入導覽列 -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch("components/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <div class="gradient"></div>
+    
+    <!-- banner-section -->
+    <section class="banner">
+      <div class="container">
+        <div class="carousel">
+          <div class="carousel__item">Content #1</div>
+          <div class="carousel__item">Content #2</div>
+          <div class="carousel__item">Content #3</div>
+        </div>
+      </div>
+    </section>
+    <!-- lists-section -->
+    <section class="vocabularyList-section">
+      <div class="container">
+        <div class="nav-search">
+          <div class="nav-left">
+            <span>Trending</span>
+            <span>Following</span>
+          </div>
+          <div class="nav-right">
+            <div class="group">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                <g>
+                  <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                  ></path>
+                </g>
+              </svg>
+            
+              <input
+                id="query"
+                class="input"
+                type="search"
+                placeholder="Search..."
+                name="searchbar"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="listcards-wrapper">
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+          <div class="listcard-wrapper">
+            <img src="/images/studio.jpg">
+            <div class="words">
+              <h2>TOEIC 700</h2>
+              <p>loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
+            </div>
+            <!-- progress -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/carouselController.js"></script>
+    <script src="js/modalController.js"></script>
+  </body>
+</html>

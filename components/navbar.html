@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <a href="/homePage.html" class="nav-link">dictionary</a>
+    <a href="/vocabularyList.html" class="nav-link">vocabulary list</a>
+  </div>
+  <div class="nav-right">
+    <a href="#" class="btn login-btn" onclick="openModal()">Log in</a>
+  </div>
+</nav>
+
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Log In</h2>
+    <form class="login-form">
+      <div class="inputs-wrapper">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" class="btn primary-btn">Log In</button>
+    </form>
+  </div>
+</div>
